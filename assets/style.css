@@ -43,6 +43,26 @@ header {
     padding: 14px;
 }
 
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
 .menu-link {
     color: #fff;
     font-weight: 500;
@@ -53,6 +73,14 @@ header {
 }
 
 /* 1-ая секция */
+
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+}
+
 .main-title {
     font-weight: 500;
     font-size: 58px;
@@ -61,7 +89,7 @@ header {
     margin-bottom: 30px;
 }
 
-.main-title .text {
+.main-title, .text {
     margin-bottom: 40px;
 }
 
@@ -78,10 +106,21 @@ header {
     color: #fff;
 }
 
+.main-img {
+    align-self: flex-end;
+}
+
 /* 2-ая секция */
+
 .rates-section {
     background: #f9fafc;
     padding: 100px 0;
+}
+
+.rates-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rates-section .title {
@@ -150,8 +189,14 @@ th, td {
 }
 
 /* 3-я секция */
+
 .create-account-section {
-    padding: 100px 0px;
+    padding: 100px 0;
+}
+
+.account-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .create-account-section .title {
@@ -164,7 +209,7 @@ th, td {
 }
 
 .list-item {
-    list-style-image: url("./images/Check.svg");
+    list-style-image: url("./assets/images/Check.svg");
     margin-left: 30px;
     margin-bottom: 15px;
     color: #363940;
@@ -173,6 +218,9 @@ th, td {
 form {
     width: 100%;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 input, select, fieldset, textarea {
@@ -182,10 +230,10 @@ input, select, fieldset, textarea {
 }
 
 input, select, fieldset, textarea, label, legend, input::placeholder, select::placeholder, textarea::placeholder {
-    font-weight: 400;
+    color: #95A1BB;
     font-size: 16px;
-    line-height: 140%;
-    color: #95a1bb;
+    font-weight: 400; 
+    line-height: 22.4px;
     font-family: inherit;
 }
 
@@ -195,7 +243,24 @@ input[type="text"] {
 
 input[type="email"], input[type="password"], input[type="date"], select {
     width: 230px;
-    height: 50 px;
+    height: 50px;
+    flex-grow: 1;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="date"], select {
+    cursor: pointer;
+}
+
+.stack,
+fieldset {
+    display: flex;
+    column-gap: 30px;
+} 
+
+.fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 fieldset {
@@ -214,7 +279,7 @@ form .button {
 }
 
 select {
-    background: url(/assets/images/Arrow-down.svg) no-repeat right 15px top 50%;
+    background: url(./assets/images/Arrow-down.svg) no-repeat right 15px top 50%;
     appearance: none;
 }
 
